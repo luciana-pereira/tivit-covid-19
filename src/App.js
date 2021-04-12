@@ -1,17 +1,13 @@
-import './App.css';
-import NumberOfCases from './Components/NumberOfCases/index.js'
-import  NumberOfDeath from './Components/NumberOfDeath/index.js'
-import  NumberOfRecovered from './Components/NumberOfRecovered/index.js'
-import CasesByCountry from './Components/CasesByCountry/index.js'
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Home from "./Components/Home/Home";
 
-function App() {
+export const App = () => {
   return (
-    <div className="App"> 
-    <NumberOfCases/>
-    <NumberOfDeath/>
-    <NumberOfRecovered/>
-    <CasesByCountry/>
-    </div>
+    <BrowserRouter>
+    <Switch>
+      <Route path="/" exact component={Home} />
+    </Switch>
+  </BrowserRouter>
   );
 }
 
