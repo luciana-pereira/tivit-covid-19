@@ -11,7 +11,6 @@
 
 //import { Animation } from '@devexpress/dx-react-chart';
 
-// Generate Sales Data
 
 
 export default function Chartt() {
@@ -28,7 +27,7 @@ export default function Chartt() {
             valueField=""
             argumentField=""
           />
-          <Title text="World population" />
+          <Title text="COVID-19" />
           <Animation />
         </Chart>
     </Paper>*/}
