@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import NumberOfCases from './Components/NumberOfCases/index.js'
+import  NumberOfDeath from './Components/NumberOfDeath/index.js'
+import  NumberOfRecovered from './Components/NumberOfRecovered/index.js'
+import CasesByCountry from './Components/CasesByCountry/index.js'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App"> 
+    <NumberOfCases/>
+    <NumberOfDeath/>
+    <NumberOfRecovered/>
+    <CasesByCountry/>
     </div>
   );
 }
