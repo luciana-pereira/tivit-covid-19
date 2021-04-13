@@ -73,7 +73,7 @@ export default function Orders() {
                     </TableRow>
                         ))} 
                         <Typography>Page: {page}</Typography>
-      <Pagination count={10} page={page} onChange={handleChange} />
+                        <Pagination count={10} page={page} onChange={handleChange} />
                 </TableBody>
             </Table>
             <div className={classes.seeMore}>
