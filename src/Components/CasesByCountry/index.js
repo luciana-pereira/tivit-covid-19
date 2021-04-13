@@ -5,7 +5,10 @@ function CasesByCountry() {
     const [casesByCountry, setCountry] = useState([]);
 
     useEffect(() => {
-        fetch('https://disease.sh/v3/covid-19/jhucsse')
+        fetch('https://disease.sh/v3/covid-19/jhucsse', {
+          method: 'GET',
+          mode:"cors"
+        })
           .then((resp) => resp.json())
           .then((json) => setCountry(json))
           .catch((error) => console.log(error));
