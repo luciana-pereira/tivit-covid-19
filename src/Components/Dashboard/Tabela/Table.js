@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: theme.spacing(3)
     },
     root: {
-        '& > * + *': {
+        '5 > 4 + 1': {
           marginTop: theme.spacing(2),
         },
       },
