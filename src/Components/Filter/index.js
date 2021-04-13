@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import "filter.css"
+import 'filter.css';
 
 const Filter = () => {
   const [filterByCountry, setFilter] = useState([]);
   const [modal, setModal] = useState('');
+  const [searchByCountry, setSearch] = useState([]);
+  const [country, setCountry] = useState('');
 
   useEffect(() => {
     fetch('https://disease.sh/v3/covid-19/jhucsse', {
@@ -15,23 +17,53 @@ const Filter = () => {
       .catch((error) => console.log(error));
   }, []);
 
+  useEffect(() => {
+    fetch('https://disease.sh/v3/covid-19/historical/', {
+      method: 'GET',
+      mode: 'cors',
+    })
+      .then((resp) => resp.json())
+      .then((json) => setSearch(json))
+      .catch((error) => console.log(error));
+  }, []);
+
+  useEffect(() => {
+    fetch('https://disease.sh/v3/covid-19/historical/', {
+      method: 'GET',
+      mode: 'cors',
+    })
+      .then((resp) => resp.json())
+      .then((json) => setSearch(json))
+      .catch((error) => console.log(error));
+  }, []);
+
   const handleSelect = (event) => {
     setModal(event.target.value);
   };
 
+  const handleSearch = (event) => {
+    setCountry(event.target.value);
+  };
+
+  const submitSearch = (event) => {
+    console.log(country);
+    setSearch(event.target.value);
+  };
+
   return (
     <section className='App'>
-     <div>
+      <div>
         <h2>Filtrar por:</h2>
+        <input type='text'></input>
         <select value={modal} onChange={handleSelect} className='select'>
           <option>Número de casos</option>
           <option>Número de mortes</option>
           <option>Número de recuperados</option>
         </select>
       </div>
-
+      <input type='text' value={country} onChange={handleSearch}></input>{' '}
+      <button onClick={submitSearch}>OK</button>
       <h2>Casos confirmados por países:</h2>
-
       <div className='container-table'>
         {modal === 'Número de casos' ? (
           <table className='table-filter'>
