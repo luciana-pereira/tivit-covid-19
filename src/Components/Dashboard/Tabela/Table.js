@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: theme.spacing(3)
     },
     root: {
-        '& > * + *': {
+        '5 > 4 + 1': {
           marginTop: theme.spacing(2),
         },
       },
@@ -73,7 +73,7 @@ export default function Orders() {
                     </TableRow>
                         ))} 
                         <Typography>Page: {page}</Typography>
-      <Pagination count={10} page={page} onChange={handleChange} />
+                        <Pagination count={10} page={page} onChange={handleChange} />
                 </TableBody>
             </Table>
             <div className={classes.seeMore}>
