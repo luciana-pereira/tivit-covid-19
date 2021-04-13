@@ -13,7 +13,7 @@ function NumberOfDeath() {
         .then((json) => setDeath(json.cases))
         .catch((error) => console.log(error));
     }, []);
-    
+   
     return (
       <section className="number-of-death">
         <h1>Número de Mortes:</h1>

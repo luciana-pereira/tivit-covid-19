@@ -1,0 +1,26 @@
+.App {
+    padding: 14px;
+  }
+  
+  .select {
+    width: 200px;
+    height: 30px;
+    font-size: 14px;
+  }
+  
+  .container-table {
+    background-color: rgb(212, 212, 212);
+    -webkit-box-shadow: 2px 5px 15px -1px #dbdbdb;
+    box-shadow: 2px 5px 15px -1px #ffffff;
+    padding: 20px;
+    width: 50%;
+  }
+  
+  .table-filter {
+    text-align: start;
+  }
+  
+  th {
+    text-align: start;
+  }
+  
