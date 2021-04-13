@@ -15,7 +15,8 @@ import NumberOfDeath from "../NumberOfDeath";
 import NumberOfRecovered from "../NumberOfRecovered";
 import { useStyles } from "./HomeStyle";
 import { Copyright } from "../Copyright/Copyright";
-//import Chartt from "../Dashboard/Grafico/Chart";
+import Graphic from "../Dashboard/Grafico/Chart"
+
 
 export default function Dashboard() {
   const classes = useStyles();
@@ -81,7 +82,7 @@ export default function Dashboard() {
             </Grid>
             <Grid item xs={12} md={10} lg={6}>
               <p>Casos confirmados por Continente</p>
-              <Paper className={fixedHeightPaper}>{/*<Chartt />*/}</Paper>
+              <Paper className={fixedHeightPaper}><Graphic /></Paper>
             </Grid>
           </Grid>
           <Box pt={4}>
