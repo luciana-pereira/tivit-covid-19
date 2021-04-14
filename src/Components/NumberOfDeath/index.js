@@ -10,7 +10,7 @@ function NumberOfDeath() {
         mode:"cors"
       })
         .then((resp) => resp.json())
-        .then((json) => setDeath(json.cases))
+        .then((json) => setDeath(json.deaths))
         .catch((error) => console.log(error));
     }, []);
    

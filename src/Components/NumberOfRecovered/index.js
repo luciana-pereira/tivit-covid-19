@@ -10,7 +10,7 @@ function NumberOfRecovered() {
           mode:"cors"
         })
           .then((resp) => resp.json())
-          .then((json) => setRecovered(json.cases))
+          .then((json) => setRecovered(json.recovered))
           .catch((error) => console.log(error));
       }, []);
     

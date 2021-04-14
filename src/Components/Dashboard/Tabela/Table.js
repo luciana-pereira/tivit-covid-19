@@ -1,86 +1,180 @@
-import React, { useEffect, useState } from "react";
-import Link from "@material-ui/core/Link";
-import { makeStyles } from "@material-ui/core/styles";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import Typography from '@material-ui/core/Typography';
-import Pagination from '@material-ui/lab/Pagination';
-
-function preventDefault(event) {
-    event.preventDefault();
-}
+import { Paper } from '@material-ui/core';
+import React, { useState, useEffect } from 'react';
+import { useStyles } from "../../Home/HomeStyle";
+import InputAdornment from '@material-ui/core/InputAdornment';
+import SearchIcon from '@material-ui/icons/Search';
+import clsx from "clsx";
 
 
-const useStyles = makeStyles((theme) => ({
-    seeMore: {
-        marginTop: theme.spacing(3)
+const Filter = () => {
+  const [filterByCountry, setFilter] = useState([]);
+  // const [data, setData] = useState([]);
+  const [modal, setModal] = useState('Número de casos');
+  const classes = useStyles();
+  const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
+
+  useEffect(() => {
+    fetch('https://disease.sh/v3/covid-19/jhucsse', {
+      method: 'GET',
+      mode: 'cors',
+    })
+      .then((resp) => resp.json())
+      .then((json) => setFilter(json))
+      .catch((error) => console.log(error));
+  }, []);
+
+  const handleSelect = (e) => {
+    setModal(e.target.value);
+  };
+
+{ /* let perPage = 5;
+  const state = {
+    page: 1,
+    perPage: perPage,
+    totalPage: Math.ceil(filterByCountry.length/perPage),
+  }
+
+  const html = {
+    get(element) {
+      return document.querySelector(element)
+    }
+  }
+
+  const controls = {
+    next() {
+      state.page++
+      const lastPage = state.page > state.totalPage;
+      if(lastPage){
+        state.page--
+      }
     },
-    root: {
-        '5 > 4 + 1': {
-          marginTop: theme.spacing(2),
-        },
-      },
-}));
+    prev() {
+      state.page--
+      if(state.page < 1) {
+        state.page++
+      }
+    },
+    goTo() {
+      html.get('.fist').addEventListener('click', () => {
+        controls.goTo(1)
+        update()
+      })
+      html.get('.last').addEventListener('click', () => {
+        controls.goTo(state.totalPage)
+        update()
+      })
+      html.get('.next').addEventListener('click', () => {
+        controls.next()
+        update()
+      })
+      html.get('.prev').addEventListener('click', () => {
+        controls.prev()
+        update()
+      })
+    },
+  }
 
-export default function Orders() {
-    const classes = useStyles();
-    const [page, setPage] = useState(1);
-    const handleChange = (event, value) => {
-      setPage(value);
-    };
-    const [data, setData] = useState([]);
+  const list = {
+    create(item) {},
+    update() {
+      let page = state.page -1;
+      let start = page * state.perPage;
+      let end = start + state.perPage;
+      const paginateItems = filterByCountry.slice(start, end) // Limitar
+      //setData(paginateItems)
+      console.log(data);
+    }
+  }
+  const update = () => {
+    list.update()
+  }
 
+  const init = () => {
+    list.update()
+  }
+init()*/}
+  return (
+    <>
+     <div>
+        <h2>Filtrar por:</h2>
+        <select value={modal} onChange={handleSelect} className='select'>
+          <option>Número de casos</option>
+          <option>Número de mortes</option>
+          <option>Número de recuperados</option>
+        </select>
+      </div>
+      <br/>
+      
 
+      <h2>Casos confirmados por países:</h2>
+      <Paper className={fixedHeightPaper}>
 
-    useEffect(() => {
-        fetch(
-            "https://disease.sh/v3/covid-19/countries?yesterday=1&twoDaysAgo=0&sort=cases&allowNull=0",
-            {
-                method: "GET",
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            }
-        )
-            .then((response) => response.json())
-            .then((data) => {
-                const iten = data;
-                setData(iten);
-                console.log(iten);
+      <div className='container-table'>
+            <InputAdornment position="start">
+                <SearchIcon />
+            </InputAdornment>
+        {modal === 'Número de casos' ? (
+          <table className='table-filter'>
+            <tbody>
+              <tr>
+                <th>País</th>
+                <th>Total de Casos</th>
+              </tr>
+              {filterByCountry.map((data) => (
+                <tr>
+                    <td>{data.country}</td>
+                    <td>{data.stats.confirmed}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
 
-            })
-            .catch((error) => console.log("error", error));
-    }, [setData]);
-
-    return (
-        <React.Fragment>
-            <h2>Casos confirmados por paises</h2>
-            <Table size="small">
-                <TableHead>
-                    <TableRow>
-                        <TableCell>País</TableCell>
-                        <TableCell>Total de casos</TableCell>
-                    </TableRow>
-                </TableHead>
-                <TableBody className={classes.root}>
-                        {data.map((itens) => (
-                            <TableRow>
-                        <TableCell>{itens.country}</TableCell>
-                        <TableCell>{itens.cases}</TableCell>
-                    </TableRow>
-                        ))} 
-                        <Typography>Page: {page}</Typography>
-                        <Pagination count={10} page={page} onChange={handleChange} />
-                </TableBody>
-            </Table>
-            <div className={classes.seeMore}>
-                <Link color="primary" href="#" onClick={preventDefault}>
-                    Ver mais casos
-        </Link>
+        ) : modal === 'Número de mortes' ? (
+          <table className='table-filter'>
+            <tbody>
+              <tr>
+                <th>País</th>
+                <th>Número de Mortes</th>
+              </tr>
+              {filterByCountry.map((data) => (
+                <tr>
+                  <td>{data.country}</td>
+                  <td>{data.stats.deaths}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        ) : modal === 'Número de recuperados' ? (
+          <table className='table-filter'>
+            <tbody>
+              <tr>
+                <th>País</th>
+                <th>Número de Recuperados</th>
+              </tr>
+              {filterByCountry.map((data) => (
+                <tr>
+                  <td>{data.country}</td>
+                  <td>{data.stats.recovered}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        ) : (
+          <></>
+        )}
+      </div>
+      <div class="controls">
+            <div class="first">&#171;</div>
+            <div class="prev">&lt;</div>
+            <div class="numbers">
+                <div>1</div>
             </div>
-        </React.Fragment >
-    );
-}
+            <div class="next">&gt;</div>
+            <div class="last">&#187;</div>
+        </div>
+      </Paper>
+      </>
+  );
+};
+
+export default Filter;
