@@ -28,7 +28,7 @@
     "build-windows": "node build-windows.js",
     "build-linux": "node build-linux.js",
     "build-mac": "node build-mac.js",
-    "build": "node build.js",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
