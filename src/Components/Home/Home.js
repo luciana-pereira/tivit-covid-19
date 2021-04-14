@@ -55,19 +55,19 @@ export default function Dashboard() {
           <Grid container spacing={3}>
             {/* Chart */}
             <Grid item xs={12} md={2} lg={2}>
-              <Paper className={fixedHeightPaper}>
+              <Paper>
                 <NumberOfCases />
                 {/*<Chart />*/}
               </Paper>
             </Grid>
             <Grid item xs={12} md={2} lg={2}>
-              <Paper className={fixedHeightPaper}>
+              <Paper>
                 <NumberOfDeath />
                 {/*<Chart />*/}
               </Paper>
             </Grid>
             <Grid item xs={12} md={2} lg={2}>
-              <Paper className={fixedHeightPaper}>
+              <Paper>
                 <NumberOfRecovered />
                 {/*<Chart />*/}
               </Paper>
