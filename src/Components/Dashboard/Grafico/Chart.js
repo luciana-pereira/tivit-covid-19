@@ -3,7 +3,6 @@ import Paper from "@material-ui/core/Paper";
 import {
   Chart,
   BarSeries,
-  Title,
   ArgumentAxis
 } from "@devexpress/dx-react-chart-material-ui";
 
@@ -14,9 +13,8 @@ const data = [
   { continent: "ÁSIA", totalcases: 3.018 },
   { continent: "EUROPA", totalcases: 3.682 },
   { continent: "OCEANIA", totalcases: 4.44 },
-  { continent: "AMERICA DO SUL", totalcases: 5.31 },
-  { continent: "AMERICA DO NORTE", totalcases: 6.127 },
-  { continent: "AMERICA DO CENTRAL", totalcases: 6.127 },
+  { continent: "A. SUL", totalcases: 5.31 },
+  { continent: "A. NORTE", totalcases: 6.127 },
   { continent: "ANTARTIDA", totalcases: 6.93 }
 ];
 

@@ -83,7 +83,7 @@ export default function Dashboard() {
             </Grid>
             <Grid item xs={12} md={10} lg={6}>
               <p>Casos confirmados por Continente</p>
-              <Paper className={fixedHeightPaper}><Graphic /></Paper>
+              <Paper><Graphic /></Paper>
             </Grid>
           </Grid>
           <Box pt={4}>
