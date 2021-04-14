@@ -1,3 +1,4 @@
+/* eslint-disable no-lone-blocks */
 import { Paper } from '@material-ui/core';
 import React, { useState, useEffect } from 'react';
 import { useStyles } from "../../Home/HomeStyle";
