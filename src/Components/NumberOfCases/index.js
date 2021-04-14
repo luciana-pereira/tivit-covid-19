@@ -1,4 +1,24 @@
 import React, { useState, useEffect } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
+
+const useStyles = makeStyles({
+  root: {
+    minWidth: 275,
+  },
+  bullet: {
+    display: 'inline-block',
+    margin: '0 2px',
+    transform: 'scale(0.8)',
+  },
+  title: {
+    fontSize: 14,
+  },
+  pos: {
+    marginBottom: 12,
+  },
+});
 
 
 function NumberOfCases() {
@@ -15,10 +35,16 @@ function NumberOfCases() {
     }, []);
     
     return (
-      <section className="number-of-cases">
-        <h1>Número de Casos</h1>
-        <h3>{numberOfCases}</h3>
-      </section>
+      <CardContent>
+        <section className="number-of-cases">
+          <Typography variant="center" component="center">
+            <h3>Número de Casos</h3>
+          </Typography>
+          <Typography variant="center" component="center">
+            <h3>{numberOfCases}</h3>
+          </Typography>
+        </section>
+      </CardContent>
     );
   }
   

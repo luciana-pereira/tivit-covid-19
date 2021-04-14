@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Link from "@material-ui/core/Link";
 import { makeStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
@@ -8,10 +7,9 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Typography from '@material-ui/core/Typography';
 import Pagination from '@material-ui/lab/Pagination';
-
-function preventDefault(event) {
-    event.preventDefault();
-}
+import Input from '@material-ui/core/Input';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import SearchIcon from '@material-ui/icons/Search';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -57,12 +55,14 @@ export default function Orders() {
 
     return (
         <React.Fragment>
-            <h2>Casos confirmados por paises</h2>
+           <Input id="input-with-icon-adornment" startAdornment={
+            <InputAdornment position="start">
+                <SearchIcon />
+            </InputAdornment>}/>
             <Table size="small">
                 <TableHead>
                     <TableRow>
                         <TableCell>País</TableCell>
-                        <TableCell>Total de casos</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody className={classes.root}>
@@ -76,11 +76,6 @@ export default function Orders() {
                         <Pagination count={10} page={page} onChange={handleChange} />
                 </TableBody>
             </Table>
-            <div className={classes.seeMore}>
-                <Link color="primary" href="#" onClick={preventDefault}>
-                    Ver mais casos
-        </Link>
-            </div>
         </React.Fragment >
     );
 }

@@ -38,7 +38,6 @@ export default class Demo extends React.PureComponent {
           <ArgumentAxis />
 
           <BarSeries valueField="totalcases" argumentField="continent" />
-          <Title text="Total de Casos" />
           <Animation />
         </Chart>
       </Paper>

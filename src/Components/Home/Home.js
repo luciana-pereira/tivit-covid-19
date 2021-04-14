@@ -18,6 +18,7 @@ import { Copyright } from "../Copyright/Copyright";
 import Graphic from "../Dashboard/Grafico/Chart"
 
 
+
 export default function Dashboard() {
   const classes = useStyles();
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
