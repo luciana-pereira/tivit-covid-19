@@ -3,22 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 
-const useStyles = makeStyles({
-  root: {
-    minWidth: 275,
-  },
-  bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
-  },
-  title: {
-    fontSize: 14,
-  },
-  pos: {
-    marginBottom: 12,
-  },
-});
 
 
 function NumberOfCases() {
@@ -36,7 +20,7 @@ function NumberOfCases() {
     
     return (
       <CardContent>
-        <section className="number-of-cases">
+        <section>
           <Typography variant="center" component="center">
             <h3>Número de Casos</h3>
           </Typography>
