@@ -77,9 +77,6 @@ display: "flex",
 overflow: "auto",
 flexDirection: "column",
 border: "1px solid gray"
-},
-fixedHeight: {
-height: 240
 }
 }));
 
