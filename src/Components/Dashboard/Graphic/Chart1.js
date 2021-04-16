@@ -20,7 +20,7 @@ const Continent = () => {
       .then((json) => setFilter(json))
       .catch((error) => console.log(error));
   }, []);
-  
+  console.log(filterByCountry)
   return (
     <>
      
