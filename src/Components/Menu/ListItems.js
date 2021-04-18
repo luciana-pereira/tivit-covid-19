@@ -7,11 +7,13 @@ import DashboardIcon from "@material-ui/icons/Dashboard";
 import PeopleIcon from "@material-ui/icons/People";
 import BarChartIcon from "@material-ui/icons/BarChart";
 import LayersIcon from "@material-ui/icons/Layers";
-import AssignmentIcon from "@material-ui/icons/Assignment";
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import PublicIcon from '@material-ui/icons/Public';
+import AssessmentIcon from '@material-ui/icons/Assessment';
 
 export const mainListItems = (
   <div>
-    <ListItem button>
+    <ListItem button href='/dashboard'>
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
@@ -19,51 +21,52 @@ export const mainListItems = (
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <BarChartIcon />
+        <PublicIcon />
       </ListItemIcon>
-      <ListItemText primary="Planilha" />
+      <ListItemText primary="Continentes" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <PeopleIcon />
+        <PublicIcon />
       </ListItemIcon>
-      <ListItemText primary="Customers" />
+      <ListItemText primary="Países" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
         <BarChartIcon />
       </ListItemIcon>
-      <ListItemText primary="Reports" />
+      <ListItemText primary="Estatística" />
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <AssessmentIcon />
+      </ListItemIcon>
+      <ListItemText primary="Relatório" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
         <LayersIcon />
       </ListItemIcon>
-      <ListItemText primary="Integrations" />
+      <ListItemText primary="Integração" />
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <PeopleIcon />
+      </ListItemIcon>
+      <ListItemText primary="Usuarios" />
     </ListItem>
   </div>
 );
 
 export const secondaryListItems = (
   <div>
-    <ListSubheader inset>Outros reports</ListSubheader>
+    <ListSubheader inset>Opçoes</ListSubheader>
     <ListItem button>
       <ListItemIcon>
-        <AssignmentIcon />
+        <ExitToAppIcon />
       </ListItemIcon>
-      <ListItemText primary="Outro icone" />
+      <ListItemText primary="Sair" />
     </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <ListItemText primary="Outro icone" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <ListItemText primary="Outro icone" />
-    </ListItem>
+
   </div>
 );
