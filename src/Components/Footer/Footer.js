@@ -1,7 +1,7 @@
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
 
-export function Copyright() {
+export const Footer = () => {
     return (
       <Typography variant="body2" color="textSecondary" align="center">
         {"Desenvolvedoras: "}
@@ -24,4 +24,4 @@ export function Copyright() {
     );
   }
 
-export default Copyright;
+export default Footer;

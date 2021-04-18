@@ -1,4 +1,4 @@
-import Logo from '../assets/coronavirus.svg';
+import Logo from '../../assets/coronavirus.svg';
 import "../../App.css"
 
 export const Icon = () => {

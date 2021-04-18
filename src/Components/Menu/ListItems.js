@@ -13,43 +13,43 @@ import AssessmentIcon from '@material-ui/icons/Assessment';
 
 export const mainListItems = (
   <div>
-    <ListItem button href='/dashboard'>
+    <ListItem button  component='a' href="/dashboard">
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
       <ListItemText primary="Dashboard" />
     </ListItem>
-    <ListItem button>
+    <ListItem button component='a' href="/continent">
       <ListItemIcon>
         <PublicIcon />
       </ListItemIcon>
       <ListItemText primary="Continentes" />
     </ListItem>
-    <ListItem button>
+    <ListItem button component='a' href="/country">
       <ListItemIcon>
         <PublicIcon />
       </ListItemIcon>
       <ListItemText primary="Países" />
     </ListItem>
-    <ListItem button>
+    <ListItem button component='a' href="/statistic">
       <ListItemIcon>
         <BarChartIcon />
       </ListItemIcon>
       <ListItemText primary="Estatística" />
     </ListItem>
-    <ListItem button>
+    <ListItem button component='a' href="/report">
       <ListItemIcon>
         <AssessmentIcon />
       </ListItemIcon>
       <ListItemText primary="Relatório" />
     </ListItem>
-    <ListItem button>
+    <ListItem button component='a' href="/integration">
       <ListItemIcon>
         <LayersIcon />
       </ListItemIcon>
       <ListItemText primary="Integração" />
     </ListItem>
-    <ListItem button>
+    <ListItem button component='a' href="/user/register">
       <ListItemIcon>
         <PeopleIcon />
       </ListItemIcon>
@@ -61,7 +61,7 @@ export const mainListItems = (
 export const secondaryListItems = (
   <div>
     <ListSubheader inset>Opçoes</ListSubheader>
-    <ListItem button>
+    <ListItem button component='a' href="/">
       <ListItemIcon>
         <ExitToAppIcon />
       </ListItemIcon>
