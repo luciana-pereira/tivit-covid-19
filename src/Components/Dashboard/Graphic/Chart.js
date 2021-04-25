@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import Paper from "@material-ui/core/Paper";
 import {
   Chart,
@@ -8,31 +8,43 @@ import {
 
 import { Animation } from "@devexpress/dx-react-chart";
 
-const data = [
-  { continent: "ÁFRICA", totalcases: 2.525 },
-  { continent: "ÁSIA", totalcases: 3.018 },
-  { continent: "EUROPA", totalcases: 3.682 },
-  { continent: "OCEANIA", totalcases: 4.44 },
-  { continent: "A. SUL", totalcases: 5.31 },
-  { continent: "A. NORTE", totalcases: 6.127 },
-  { continent: "ANTARTIDA", totalcases: 6.93 }
-];
 
-export default class Demo extends React.PureComponent {
-  constructor(props) {
-    super(props);
+export const Demo = () => {
+  const [ filter, setFilter] = useState({});
 
-    this.state = {
-      data
-    };
+
+  useEffect(() => {
+    fetch('https://disease.sh/v3/covid-19/continents', {
+      method: 'GET',
+      mode: 'cors',
+    })
+      .then((resp) => resp.json())
+      .then((json) => setFilter(json))
+      .catch((error) => console.log(error));
+  }, []);
+  //const [continent, setContinent] = useState([]);
+  const continent = [];
+  const cases = []
+
+  for (let i in filter) {
+      continent.push(filter[i].continent);
+      cases.push(filter[i].cases);
   }
 
-  render() {
-    const { data: chartData } = this.state;
+
+  const data = [
+    { continent: continent[0], totalcases: cases[0] },
+    { continent: continent[1], totalcases: cases[1] },
+    { continent: continent[2], totalcases: cases[2] },
+    { continent: continent[3], totalcases: cases[3] },
+    { continent: continent[4], totalcases: cases[4] },
+    { continent: continent[5], totalcases: cases[5] },
+
+  ];
 
     return (
       <Paper>
-        <Chart data={chartData}>
+        <Chart data={data}>
           <ArgumentAxis />
 
           <BarSeries valueField="totalcases" argumentField="continent" />
@@ -40,5 +52,5 @@ export default class Demo extends React.PureComponent {
         </Chart>
       </Paper>
     );
-  }
 }
+export default Demo;
