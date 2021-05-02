@@ -106,8 +106,8 @@ const fixedHeightPaper = clsx(classes.paper);
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
         < Text />
-          <p>Informações gerais</p>
-          <Grid container spacing={3}>
+          <h3>Informações gerais</h3>
+          <Grid container spacing={1}>
             <Grid item xs={12} md={2} lg={2}>
               <Paper className={fixedHeightPaper} >
                 <NumberOfCases />
@@ -123,12 +123,13 @@ const fixedHeightPaper = clsx(classes.paper);
                 <NumberOfRecovered />
               </Paper>
             </Grid>
-            <Grid item xs={12} md={4} lg={3}></Grid>
+            <Grid item xs={12} md={2} lg={2}></Grid>
             <Grid item xs={12} md={10} lg={6}>
+            <h2>Informações específicas por País</h2>
               <Table1 />
             </Grid>
             <Grid item xs={12} md={10} lg={6}>
-              <p>Casos confirmados por Continente</p>
+              <h2>Casos confirmados por Continentes</h2>
               <Paper>
                 <Graphic />
               </Paper>
