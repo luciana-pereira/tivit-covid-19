@@ -12,8 +12,10 @@ export const Text = () => {
         <b>COVID-19</b>
       </h1>
       <p>
-        Números relacionados a quantidade de casos identificados até o dia:
-        {date}/{month}/{year}
+        Números relacionados a quantidade de casos identificados até o dia: {" "}
+        <b>
+          {date}/{month}/{year}
+        </b>
       </p>
     </>
   );
