@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+![Data-Cov](src/assets/DataCov.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esse projeto foi realizado para o Talent Fest- turma SAP005 - finalizando o Bootcamp da Laboratoria.
 
-## Available Scripts
+[**Conheça a Data-cov :computer:**] (https://tivit-covid-19.vercel.app/)
+> Status do Projeto: concluído :heavy_check_mark:
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Índice
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [1. Apresentação do Projeto](#1-apresentação-do-projeto)
+  - [1.1 Conhecendo a interface](#1.1-conhecendo-a-interface)
+- [2. Planejamento Ágil](#2-planejamento-agil)
+- [3. Desenvolvimento](#4-desenvolvimento)
+  - [3.1 Critérios mínimos de aceitação do projeto](#3.1-problema-a-ser-resolvido) 
+  - [3.2 Protótipos](#3.4-protótipos)
+- [4. Habilidades Desenvolvidas](#4-habilidades-desenvolvidas)  
+- [5. Desenvolvedoras](#5-desenvolvedoras)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## 1. Apresentação do Projeto :clipboard:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+A Data-Cov é um dashboard feito especialmente para uma empresa especializada na distribuição de materiais hospitalares para auxiliar na tomada de decisões estratégicas. 
+O desafio foi proposto pelos colaboradores da TIVIT: "Avisualização dos dados faz parte do nosso dia-a-dia na Tivit. Ainda que softwares processem dados e as APIs (Application Programming Interfaces) nos permitam acessar esses dados, muitas vezes é necessária adaptação e manipulação dessas informações para que possamos visualizá-las e assim trazer o impacto desejado para nossos clientes."
 
-### `npm run build`
+### 1.1 Conhecendo um pouco da interface
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Esta aplicação foi pensada para que os colaborares da empresa possam utilizar intuitivamente os recursos disponíveis e que ao mesmo tempo facilite o acesso aos dados referente ao Covid para tomada de decisões estratégicas. Acessando o site da [Data-Cov](https://tivit-covid-19.vercel.app/), será possível verificar os dados por país ou continente.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 2. Planejamento Ágil :memo:
 
-### `npm run eject`
+Utilizou-se a ferramenta _Trello_ para planejar as ideais e organizar as tarefas.
+Se quiser saber um pouco mais sobre o planejamento, basta acessar esse [link](https://trello.com/b/SKLkk6EW/desafio-tivit).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 3. Desenvolvimento
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 3.1 Critérios mínimos de aceitação do projeto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### 3.2 Prótipos
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+O projeto foi desenvolvido utilizando protótipos de média fidelidade fornecidos pelos colaboradores da TIVIT. Para ter acesso ao prótipo e todas as informações sobre o desafio, acesse [AQUI](src/Img/Desafio_TivitTF_SAP005.pdf)
 
-## Learn More
+## 4. Habilidades Desenvolvidas :dart:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+:pushpin: HTML semântico<br>
+:pushpin: CSS <br>
+:pushpin: Javascript <br>
+:pushpin: Colaboração pelo Github<br>
+:pushpin: Design Sprint<br>
+:pushpin: MVP (Mínimo Produto Viável)<br>
+:pushpin: Manipulação de API<br>
+:pushpin: React.js<br>
+:pushpin: Material UI
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+#### Soft Skills
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+:pushpin: Colaboração<br>
+:pushpin: Trabalho em equipe<br>
+:pushpin: Diálogo entre a dupla<br>
+:pushpin: Manejo do estresse<br>
+:pushpin: Planejamento<br>
+:pushpin: Saber pedir ajuda às colegas e aos mentores
 
-### Analyzing the Bundle Size
+## 5. Desenvolvedoras :computer:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### :octocat: [**Edilene Fernandes**](https://github.com/edilenefern) 
 
-### Making a Progressive Web App
+#### :octocat: [**Juliane Cristina**](https://github.com/Juliane-C) 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#### :octocat: [**Luciana Pereira**](https://github.com/luciana-pereira) 
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### :octocat: [**Mairã Soares**](https://github.com/MairaSoares)
