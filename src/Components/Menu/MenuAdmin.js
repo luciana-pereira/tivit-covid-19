@@ -9,12 +9,10 @@ import IconButton from "@material-ui/core/IconButton";
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { makeStyles } from "@material-ui/core/styles";
 
-import NotificationsIcon from "@material-ui/icons/Notifications";
 import MenuIcon from "@material-ui/icons/Menu";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import Badge from "@material-ui/core/Badge";
 const drawerWidth = 240;
 
 const MenuAdmin = ({title}) => {
@@ -136,11 +134,6 @@ const MenuAdmin = ({title}) => {
           >
             { title }
           </Typography>
-          <IconButton color="inherit">
-            <Badge badgeContent={4} color="secondary">
-              <NotificationsIcon />
-            </Badge>
-          </IconButton>
         </Toolbar>
       </AppBar>
         <Drawer
