@@ -12,7 +12,6 @@ export const App = () => {
       <Route path='/' exact component={PanelLogo} />
       <Route path="/dashboard" exact component={Home} />
       <Route path="/user/register" exact component={UserRegister} />
-
     </Switch>
   </BrowserRouter>
   );
