@@ -95,20 +95,22 @@ const MenuAdmin = ({title}) => {
     fixedHeight: {
     height: 445
     }
-    }));
-    const classes = useStyles();
-    const [open, setOpen] = useState(true);
-        const handleDrawerOpen = () => {
-        setOpen(true);
-         };
-        const handleDrawerClose = () => {
-        setOpen(false);
-        };
+  }));
 
-    return (
-        <>
-        <CssBaseline />
-        <AppBar
+  const classes = useStyles();
+  const [open, setOpen] = useState(true);
+
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
+
+  return (
+    <>
+      <CssBaseline />
+      <AppBar
         position="absolute"
         className={clsx(classes.appBar, open && classes.appBarShift)}
       >
@@ -136,7 +138,8 @@ const MenuAdmin = ({title}) => {
           </Typography>
         </Toolbar>
       </AppBar>
-        <Drawer
+
+      <Drawer
         variant="permanent"
         classes={{
           paper: clsx(classes.drawerPaper, !open && classes.drawerPaperClose),
@@ -153,7 +156,7 @@ const MenuAdmin = ({title}) => {
         <Divider />
         <List>{secondaryListItems}</List>
       </Drawer>
-      </>
-    )
+    </>
+  )
 }
 export default MenuAdmin;
