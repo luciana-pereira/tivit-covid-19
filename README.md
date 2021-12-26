@@ -1,8 +1,8 @@
-![Data-Cov](src/assets/DataCov.png)
+[Data-Cov](src/assets/DataCov.png)
 
 Esse projeto foi realizado para o Talent Fest- turma SAP005 - finalizando o Bootcamp da Laboratoria.
 
-[**Conheça a Data-cov :computer:**] (https://tivit-covid-19.vercel.app/)
+[**Conheça a Data-cov :computer:**](https://tivit-covid-19.vercel.app/)
 > Status do Projeto: concluído :heavy_check_mark:
 
 ---
